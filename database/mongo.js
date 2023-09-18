@@ -1,5 +1,7 @@
 let mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/housesdb");
+mongoose.connect(
+  "mongodb+srv://monir198321:0799250037@cluster0.zc4yiba.mongodb.net/?retryWrites=true&w=majority"
+);
 let userschma = new mongoose.Schema({
   id: String,
   street: String,
