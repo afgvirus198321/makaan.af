@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makaan AF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <style>
+      body {
+        background: url(/public/images/leaf.jpg);
+        background-size: 400% 400%;
+        background-size: cover;
+        height: 100vh;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="maincontainerup">
+      <form
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+        class="signupform"
+        id="formidsignup"
+      >
+        <div class="organize">
+          <label for="email">Email address : </label>
+          <div class="singupinput">
+            <input
+              type="text"
+              name="email"
+              class="signinput"
+              placeholder="Enter email address"
+              id="email"
+            />
+            <p class="inpup" id="emailp"></p>
+          </div>
+        </div>
+        <div class="organize">
+          <label for="username"
+            >Username : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+          >
+          <div class="singupinput">
+            <input
+              type="text"
+              name="username"
+              class="signinput"
+              placeholder="Enter user name"
+              id="username"
+            />
+            <p class="inpup" id="usernamep"></p>
+          </div>
+        </div>
+
+        <div class="organize">
+          <label for="password"
+            >password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+          >
+          <div class="singupinput">
+            <input
+              type="password"
+              name="password"
+              class="signinput"
+              placeholder="Enter password"
+              id="password"
+            />
+            <p class="inpup" id="passwordp"></p>
+          </div>
+          <i class="far fa-eye" id="hide"></i>
+        </div>
+        <button type="submit" class="subbtnsign" id="signup">Sign up</button>
+      </form>
+    </div>
+
+    <script>
+      let flag = true;
+      let showbtn = document.getElementById("hide");
+      let password = document.getElementById("password");
+      showbtn.addEventListener("click", () => {
+        if (flag == true) {
+          password.setAttribute("type", "text");
+          flag = false;
+        } else {
+          password.setAttribute("type", "password");
+
+          flag = true;
+        }
+      });
+      let email = document.getElementById("email");
+      let username = document.getElementById("username");
+      let usernamep = document.getElementById("usernamep");
+      let emailp = document.getElementById("emailp");
+      let passwordp = document.getElementById("passwordp");
+      let formsiup = document.getElementById("formidsignup");
+      formsiup.addEventListener("submit", (event) => {
+        let emcode = /[a-z A-Z 0-9 . _ -]+@[a-z A-Z]+[.][a-z A-Z]+/;
+        if (!emcode.test(email.value)) {
+          emailp.innerHTML = "set correct email like : username@gmail.com";
+          event.preventDefault();
+        } else {
+          emailp.innerHTML = "";
+          event.defaultPrevented = false;
+        }
+        if (password.value.length < 6) {
+          event.preventDefault();
+          passwordp.innerHTML = "password should be more than 5 characters";
+          showbtn.style.marginBottom = "3vh";
+        } else {
+          passwordp.innerHTML = "";
+          event.defaultPrevented = false;
+        }
+        if (username.value == "") {
+          event.preventDefault();
+          usernamep.innerHTML = "Please fill out this field";
+        } else {
+          event.defaultPrevented = false;
+          usernamep.innerHTML = "";
+        }
+      });
+    </script>
+  </body>
+</html>

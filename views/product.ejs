@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makaan AF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href=" css/main.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <div class="threeline" id="threeline">
+      <div class="firstdiv">
+        <span class="material-symbols-outlined" id="closemenu"> close </span>
+        <div>
+          <img src="images/logo.png" alt="logo Design" />
+          <h4>Makaan af</h4>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/buy">Buy</a></li>
+        <li><a href="/rent">Rent</a></li>
+        <li><a href="/sell" style="color: rgb(252, 1, 1)">Sell</a></li>
+      </ul>
+    </div>
+    <!-- navbar start -->
+    <nav id="nav">
+      <span class="material-symbols-outlined" id="tmenu" style="color: white">
+        menu
+      </span>
+      <ul class="left_nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/buy">Buy</a></li>
+        <li><a href="/rent">Rent</a></li>
+        <li><a href="/sell" style="color: rgb(0, 0, 0)">Sell</a></li>
+      </ul>
+      <div>
+        <img src="images/logo.png" alt="logo Design" />
+        <h4>Makaan Af</h4>
+      </div>
+    </nav>
+
+    <!-- database section -->
+    <div class="buy_main_div">
+      <button id="back">back</button>
+      <div class="product_section">
+        <img src="importedimg/<%=info.photo%>" alt="house" />
+        <div class="textinfo">
+          <table>
+            <tr>
+              <td>
+                <h3><span class="itemchange">price : </span></h3>
+              </td>
+              <td><h3><%=info.price%> Af</h3></td>
+            </tr>
+            <tr>
+              <td>
+                <h5><span class="itemchange">Sq-ft : </span></h5>
+              </td>
+              <td><h5><%=info.square%>sq-ft</h5></td>
+            </tr>
+            <tr>
+              <td>
+                <h5><span class="itemchange">Rooms quantity : </span></h5>
+              </td>
+              <td><h5><%=info.rooms%> Rooms</h5></td>
+            </tr>
+            <tr>
+              <td>
+                <h5><span class="itemchange">Phone number : +93</span></h5>
+              </td>
+              <td><h5><%=info.phnum%></h5></td>
+            </tr>
+            <tr>
+              <td>
+                <h5><span class="itemchange">Street : </span></h5>
+              </td>
+              <td><h5><%=info.street%></h5></td>
+            </tr>
+            <tr>
+              <td>
+                <h5><span class="itemchange">City : </span></h5>
+              </td>
+              <td><h5><%=info.city%></h5></td>
+            </tr>
+            <tr>
+              <td>
+                <h5><span class="itemchange">province : </span></h5>
+              </td>
+              <td><h5><%=info.province%></h5></td>
+            </tr>
+            <tr>
+              <td>
+                <h6><span class="itemchange">More info : </span></h6>
+              </td>
+              <td><h6><%=info.describe%></h6></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- start of footer -->
+      <footer>
+        <div>
+          <h3><a href="">About</a></h3>
+          <h3><a href="">Career</a></h3>
+          <h3><a href="">Help</a></h3>
+          <h3><a href="">Advertise</a></h3>
+          <h3><a href="">Term of use</a></h3>
+        </div>
+        <p>
+          Makaan Group is committed to ensuring digital accessibility for
+          individuals with disabilities. We are continuously working to improve
+          the accessibility of our web experience for everyone, and we welcome
+          feedback and accommodation requests. If you wish to report an issue or
+          seek an accommodation, please let us know. Makaan, Inc. holds real
+          estate brokerage licenses in multiple provinces. Makaan (Afghanistan),
+          Inc. holds real estate brokerage licenses in multiple provinces
+        </p>
+        <div class="city">
+          <img src=" images/city.png" alt="city picture" />
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("back").addEventListener("click", () => {
+        history.back();
+      });
+    </script>
+    <script src=" javascript/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makaan AF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href=" css/main.css" />
+    <style>
+      #phnumlabel {
+        font-size: 1.7rem;
+        color: white;
+      }
+      #phnum {
+        margin-left: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <div class="threeline" id="threeline">
+      <div class="firstdiv">
+        <span class="material-symbols-outlined" id="closemenu"> close </span>
+        <div>
+          <img src="images/logo.png" alt="logo Design" />
+          <h4>Makaan af</h4>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/buy">Buy</a></li>
+        <li><a href="/rent">Rent</a></li>
+        <li><a href="/sell" style="color: rgb(252, 1, 1)">Sell</a></li>
+      </ul>
+    </div>
+    <!-- navbar start -->
+    <nav id="nav">
+      <span class="material-symbols-outlined" id="tmenu" style="color: white">
+        menu
+      </span>
+      <ul class="left_nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/buy">Buy</a></li>
+        <li><a href="/rent">Rent</a></li>
+        <li><a href="/sell" style="color: rgb(0, 0, 0)">Sell</a></li>
+      </ul>
+      <div>
+        <img src="images/logo.png" alt="logo Design" />
+        <h4>Makaan Af</h4>
+      </div>
+    </nav>
+
+    <div class="maincontainer">
+      <form
+        action="/senddata"
+        method="post"
+        enctype="multipart/form-data"
+        class="formsell"
+        id="formid"
+      >
+        <div class="container">
+          <h1>Set address</h1>
+          <hr />
+          <p>Kindly input the address of your house</p>
+          <div class="container address">
+            <input
+              type="text"
+              name="street"
+              class="input inp1"
+              placeholder="Street address"
+              id="street"
+            />
+            <p id="streetp" class="inputp"></p>
+            <input
+              type="text"
+              name="city"
+              class="input inp1"
+              placeholder="City"
+              id="city"
+            />
+            <p id="cityp" class="inputp"></p>
+            <input
+              type="text"
+              name="province"
+              class="input inp1"
+              placeholder="Province"
+              id="province"
+            />
+            <p id="provincep" class="inputp"></p>
+          </div>
+        </div>
+        <div class="container price">
+          <h1>Set your price</h1>
+          <hr />
+
+          <input
+            type="number"
+            name="price"
+            class="input inp2"
+            placeholder="Enter price"
+            id="price"
+          />
+          <p class="inputp" id="pricep"></p>
+        </div>
+        <div class="container photos">
+          <h1>Photos</h1>
+          <hr />
+          <p>Upload your photo</p>
+          <input type="file" name="file" class="inp3" id="upload" />
+
+          <div class="upldiv">
+            <img
+              src=" images/upload icon.png"
+              alt="upload icon"
+              class="uploadbtn"
+              id="imgupload"
+            />
+
+            <h3 id="filetxt">Upload Here</h3>
+            <p class="inputp uploadp" id="uploadp"></p>
+          </div>
+        </div>
+        <div class="container">
+          <h1>Home facts</h1>
+          <hr />
+          <p>Kindly input info of your house</p>
+          <div class="container houseinfo">
+            <input
+              type="number"
+              name="rooms"
+              class="input inp4"
+              placeholder="Rooms quantity"
+              id="rooms"
+            />
+            <p class="inputp" id="roomsp"></p>
+            <input
+              type="number"
+              name="square"
+              class="input inp4"
+              placeholder="Square feet"
+              id="square"
+            />
+            <p class="inputp" id="squarep"></p>
+          </div>
+          <h1>SEll | Rent</h1>
+          <hr />
+          <div class="container houseinfo">
+            <select class="select" name="sellrent">
+              <option value="Sell">Sell</option>
+              <option value="Rent">Rent</option>
+            </select>
+          </div>
+          <h1>Describe more</h1>
+          <hr />
+          <textarea
+            name="describe"
+            id=""
+            class="textarea"
+            placeholder="Describe more"
+          ></textarea>
+        </div>
+        <div class="container contact">
+          <h1>contact info</h1>
+          <hr />
+          <label for="phnum" id="phnumlabel"><span>+93</span></label>
+          <input
+            type="number"
+            name="phnum"
+            placeholder="799xxxxxx"
+            class="input inp5"
+            title="kindly input your number"
+            id="phnum"
+          />
+          <p class="inputp" id="phnump"></p>
+          <span class="inputp" id="phnump2"></span>
+        </div>
+        <button type="submit" class="subbtn" id="submit">Post here</button>
+      </form>
+    </div>
+    <!-- start of footer -->
+    <footer class="footer">
+      <div>
+        <h3><a href="">About</a></h3>
+        <h3><a href="">Career</a></h3>
+        <h3><a href="">Help</a></h3>
+        <h3><a href="">Advertise</a></h3>
+        <h3><a href="">Term of use</a></h3>
+      </div>
+      <p class="footerinfo">
+        Makaan Group is committed to ensuring digital accessibility for
+        individuals with disabilities. We are continuously working to improve
+        the accessibility of our web experience for everyone, and we welcome
+        feedback and accommodation requests. If you wish to report an issue or
+        seek an accommodation, please let us know. Makaan, Inc. holds real
+        estate brokerage licenses in multiple provinces. Makaan (Afghanistan),
+        Inc. holds real estate brokerage licenses in multiple provinces
+      </p>
+      <div class="city">
+        <img src=" images/city.png" alt="city picture" />
+      </div>
+    </footer>
+
+    <script src=" javascript/index.js"></script>
+  </body>
+</html>
